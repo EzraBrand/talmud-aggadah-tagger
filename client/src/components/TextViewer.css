@@ -1,0 +1,122 @@
+.text-viewer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-viewer-original,
+.text-viewer-translation {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hebrew-text {
+  font-family: "SBL Hebrew", "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+.text-content {
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  user-select: text;
+  cursor: text;
+  position: relative;
+}
+
+.text-viewer-loading {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  color: #666;
+}
+
+.tag-menu {
+  z-index: 1000;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+}
+
+.tag-menu-content {
+  padding: 1rem;
+}
+
+.tag-menu h4 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.tag-category {
+  margin-bottom: 1rem;
+}
+
+.tag-category h5 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-button {
+  background: #e9ecef;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tag-button:hover {
+  background: #dee2e6;
+}
+
+.close-menu {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-menu:hover {
+  background: #c82333;
+}
+
+.tagged-text {
+  background-color: rgba(255, 220, 100, 0.3);
+  border-bottom: 2px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+  .text-viewer {
+    grid-template-columns: 1fr;
+  }
+  
+  .tag-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
